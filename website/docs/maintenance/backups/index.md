@@ -46,7 +46,7 @@ kubectl exec -it deployment/authentik-worker -c authentik -- ak listbackups
 Then, to restore, run
 
 ```
-docker-compose run --rm worker restore default-2020-10-03-115557.psql
+docker-compose run --rm worker restore -i default-2020-10-03-115557.psql
 # Or for kubernetes
 kubectl exec -it deployment/authentik-worker -c authentik -- ak restore default-2020-10-03-115557.psql
 ```
